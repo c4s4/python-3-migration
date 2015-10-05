@@ -47,7 +47,7 @@ print((x, y))
 Bonnes nouvelles pour print
 ---------------------------
 
-L'outil `2to3` (qui convertit les sources Python 2 en Python 3) gère les déclarations `print̀`.
+L'outil `2to3` (qui convertit les sources Python 2 en Python 3) gère les déclarations `print`.
 
 On peut anticiper dans les sources 2 avec la déclaration :
 
