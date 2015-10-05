@@ -75,7 +75,7 @@ Vues et itérateurs au lieu de listes (suite)
 
 On peut voir la différence entre listes et vues de la manière suivante :
 
-![](list-vs-view.png)
+![](img/list-vs-view.png)
 
 ---
 Fonctions map, filter et zip
