@@ -8,7 +8,7 @@ slides: clean
 	@echo "$(YELLOW)Generating slides$(CLEAR)"
 	mkdir -p $(BUILD_DIR)
 	cp template.html $(BUILD_DIR)/index.html
-	sed -i -e "/<? CONTENT ?>/{r slides.md" -e "d}" $(BUILD_DIR)/index.html
+	sed -i -e "/<? CONTENT ?>/{r readme.md" -e "d}" $(BUILD_DIR)/index.html
 	cp -r img/ $(BUILD_DIR)
 
 clean:
