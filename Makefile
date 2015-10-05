@@ -9,7 +9,7 @@ slides:
 	mkdir -p $(BUILD_DIR)
 	cp template.html $(BUILD_DIR)/index.html
 	sed -i -e "/<? CONTENT ?>/{r slides.md" -e "d}" $(BUILD_DIR)/index.html
-	cp *.png $(BUILD_DIR)
+	cp -r img/ $(BUILD_DIR)
 
 clean:
 	@echo "$(YELLOW)Cleaning generated files$(CLEAR)"
