@@ -4,7 +4,7 @@ YELLOW=\033[1m\033[93m
 CYAN=\033[1m\033[96m
 CLEAR=\033[0m
 
-slides:
+slides: clean
 	@echo "$(YELLOW)Generating slides$(CLEAR)"
 	mkdir -p $(BUILD_DIR)
 	cp template.html $(BUILD_DIR)/index.html
