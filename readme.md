@@ -9,9 +9,15 @@ BDX.io 2015
 Les nouveautés de Python 3
 --------------------------
 
-Il y a un document pour ça :
+Python 3 (ou Python 3000 ou encore Py3k) est une refonte de Python, incompatible avec les versions 2, qui a commencé le 5 avril 2006 et qui a abouti à la release de Python 3.0.0 le 3 décembre 2008. Depuis, nombre de fonctionnalités ont été backportées vers les versions 2.
+
+Un document liste les changements de Python 3 :
 
 <https://docs.python.org/3.5/whatsnew/3.0.html>
+
+Un site est dédié au portage vers Python 3 :
+
+<http://python3porting.com/>
 
 ---
 La fonction print
@@ -23,7 +29,7 @@ Print n'est plus une déclaration mais une fonction :
 # avant
 print "Hello World!"
 # après
-print("Hello Word!")
+print("Hello World!")
 ```
 
 ---
@@ -121,4 +127,26 @@ Outils de migration
 2to3
 
 six
+
+Python 3 warning mode : démarrer Python avec l'option `-3`, indique alors les incompatibilités qui ne peuvent être gérées par *2to3*.
+
+---
+Procédure de migration
+----------------------
+
+0- S'assurer, avant la migration, que l'on a une bonne couverture de tests.
+1- Activer les warnings Python 3
+2- Tester et éditer jusqu'à ce qu'il ne reste plus de warning.
+3- Utiliser l'outil 2to3 pour convertir le source vers Python 3. Ne pas éditer les sources résultants à la main !
+4- Tester le code avec Python 3.
+5- Si des problèmes persistent, corriger le source Python 2 et reprendre à partir de l'étape 2.
+6- On releasera deux versions : une Python 2 et une Python 3.
+
+Il est conseillé de ne pas éditer le code Python 3 avant de ne plus assurer le support de la version Python 2.
+
+---
+Les chiffres sur la migration
+-----------------------------
+
+<http://astrofrog.github.io/blog/2015/05/09/2015-survey-results/>
 
