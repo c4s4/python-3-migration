@@ -61,7 +61,7 @@ On peut voir la différence entre listes et vues de la manière suivante :
 Fonctions map, filter et zip
 ----------------------------
 
-Les fonctions `map()`, `filter()` et `zip()` renvoient aussi des vues. Pour les deux premières, il faut les remplacer par des list comprehensions. Donc on remplacera :
+Les fonctions `map()`, `filter()` et `zip()` renvoient aussi des vues. Pour les deux premières, il faut les remplacer par des list comprehensions :
 
 ```python
 import math
@@ -81,11 +81,11 @@ Chaînes de caractères
 
 En Python 2, les chaînes de caractères sont de deux types : unicode et 8-bits. On peut mixer les deux, mais cela conduit souvent à des erreurs de type `UnicodeDecodeError`.
 
-En Python 3, le type qui contient du texte est `str` et celui qui contient de la donnée est `bytes`. On ne peut mixer les deux, ce qui lève une `TypeError`.
+En Python 3, le type qui contient du texte est `str` et celui qui contient de la donnée est `bytes`. On ne peut mixer les deux, sans quoi on lève une `TypeError`.
 
-On peut préparer la migration en n'utilisant en Python 2 que des chaînes unicode pour contenir du texte. Alors l'outil *2to3* pourra effectuer la majeure partie du travail pour vous.
+On peut préparer la migration en n'utilisant en Python 2 que des chaînes unicode pour contenir du texte et effectuer explicitement les conversions avec un encoding explicite. Alors l'outil *2to3* pourra effectuer la majeure partie du travail pour vous.
 
-Il y aurait beaucoup à dire sur le sujet des chaînes de catactères et des données binaires, mais cela aurait mérité une conférence à part... Pour plus de détails sur ce sujet, voir le Unicode Howto : <https://docs.python.org/3.5/howto/unicode.html>.
+Il y aurait beaucoup à dire sur le sujet des chaînes de catactères et des données binaires, pour plus de détails sur ce sujet, voir le Unicode Howto : <https://docs.python.org/3.5/howto/unicode.html>.
 
 ---
 Autres changements
