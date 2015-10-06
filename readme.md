@@ -233,4 +233,4 @@ six
 
 Python 3 warning mode : démarrer Python avec l'option `-3`, indique alors les incompatibilités qui ne peuvent être gérées par *2to3*.
 
-
+From future : division, absolute\_import, print\_function et unicode\_literals (<https://docs.python.org/2/library/__future__.html>).
