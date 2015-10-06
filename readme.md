@@ -95,14 +95,48 @@ Autres changements
 - Nombres entiers : tous les entiers sont maintenant du type `long`. Une division de nombres entiers comme `1/2` donne un ̀`float`, pour effectuer une division entière on écrira `1//2`.
 
 ---
-Changement de syntaxe
----------------------
+Nouvelles syntaxes
+------------------
 
 - Annotations des arguments et valeurs de retour des fonctions.
+
+```python
+def repeat(s: str, n: int) -> str:
+    return n*s
+```
+
 - Arguments de fonction ne pouvant qu'être nommés.
+
+```python
+>>> def func(*, foo, bar):
+>>>     print(foo, bar)
+>>> func(1, 2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: func() takes 0 positional arguments but 2 were given
+```
+
 - Déclaration `nonlocal` qui permet d'utiliser une variable qui n'est ni locale ni globale.
-- Éclatement d'itérable avec reste : `x, y, *reste = range(5)`. reste vaudra `[2, 3, 4]`.
-- Compréhension de dictionnaire : `{c: chr(c) for c in range(256)}` construira un dictionnaire associant un caractère à son code ASCII.
+
+---
+Nouvelles syntaxes (suite)
+--------------------------
+
+- Éclatement d'itérable avec reste :
+
+```python
+>>> x, y, *reste = range(5)
+>>> print(reste)
+[2, 3, 4]
+```
+
+- Compréhension de dictionnaire :
+
+```python
+{c: chr(c) for c in range(256)}
+```
+
+Construira un dictionnaire associant un caractère à son code ASCII.
 
 
 
