@@ -83,7 +83,7 @@ En Python 2, les chaînes de caractères sont de deux types : unicode et 8-bits.
 
 En Python 3, le type qui contient du texte est `str` et celui qui contient de la donnée est `bytes`. On ne peut mixer les deux, sans quoi on lève une `TypeError`.
 
-On peut préparer la migration en n'utilisant en Python 2 que des chaînes unicode pour contenir du texte et effectuer explicitement les conversions avec un encoding explicite. Alors l'outil *2to3* pourra effectuer la majeure partie du travail pour vous.
+On peut préparer la migration en n'utilisant en Python 2 que des chaînes unicode pour contenir du texte et effectuer explicitement les conversions entre `str` et `bytes`. Alors l'outil *2to3* pourra effectuer la majeure partie du travail pour vous.
 
 Il y aurait beaucoup à dire sur le sujet des chaînes de catactères et des données binaires, pour plus de détails sur ce sujet, voir le Unicode Howto : <https://docs.python.org/3.5/howto/unicode.html>.
 
@@ -91,8 +91,20 @@ Il y aurait beaucoup à dire sur le sujet des chaînes de catactères et des don
 Autres changements
 ------------------
 
-- Ordre des comparaisons.
-- Nombres entiers.
+- Comparaisons : on ne peut plus comparer des types qui ne sont pas comparables, donc `1 < ''` est interdit en Python 3 (lève une `TypeError`).
+- Nombres entiers : tous les entiers sont maintenant du type `long`. Une division de nombres entiers comme `1/2` donne un ̀`float`, pour effectuer une division entière on écrira `1//2`.
+
+---
+Changement de syntaxe
+---------------------
+
+- Annotations des arguments et valeurs de retour des fonctions.
+- Arguments de fonction ne pouvant qu'être nommés.
+- Déclaration `nonlocal` qui permet d'utiliser une variable qui n'est ni locale ni globale.
+- Éclatement d'itérable avec reste : `x, y, *reste = range(5)`. reste vaudra `[2, 3, 4]`.
+- Compréhension de dictionnaire : `{c: chr(c) for c in range(256)}` construira un dictionnaire associant un caractère à son code ASCII.
+
+
 
 ---
 Outils de migration
