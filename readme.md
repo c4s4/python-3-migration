@@ -18,8 +18,7 @@ Un document liste les changements de Python 3 :
 <https://docs.python.org/3.5/whatsnew/3.0.html>
 
 ---
-La fonction print
------------------
+### La fonction print
 
 Print n'est plus une déclaration mais une fonction :
 
@@ -46,8 +45,7 @@ print((x, y))
 On peut utiliser ces nouvelles formes en Python 2 avec l'import `from __future__ import print_function`, mais on ne peut plus utiliser les formes autorisées en Python 2.
 
 ---
-Vues et itérateurs au lieu de listes
-------------------------------------
+### Vues et itérateurs au lieu de listes
 
 En Python 2, `dict.keys()`, `dict.values()` et `dict.items()` renvoient une liste. Cette liste est valide au moment de l'appel et si le dictionnaire est modifié, la liste ne l'est pas. D'autre part, cette liste modifiable.
 
@@ -58,8 +56,7 @@ On peut voir la différence entre listes et vues de la manière suivante :
 ![](img/list-vs-view.png)
 
 ---
-Fonctions map, filter et zip
-----------------------------
+### Fonctions map, filter et zip
 
 Les fonctions `map()`, `filter()` et `zip()` renvoient aussi des vues. Pour les deux premières, il faut les remplacer par des list comprehensions :
 
@@ -76,8 +73,7 @@ print([x for x in range(6) if x % 2 == 0])
 Ces formes avec list comprehensions sont bien plus claires et tout aussi rapides que les versions avec fonctions.
 
 ---
-Chaînes de caractères
----------------------
+### Chaînes de caractères
 
 En Python 2, les chaînes de caractères sont de deux types : unicode et 8-bits. On peut mixer les deux, mais cela conduit souvent à des erreurs de type `UnicodeDecodeError`.
 
@@ -88,15 +84,13 @@ On peut préparer la migration en n'utilisant en Python 2 que des chaînes unico
 Il y aurait beaucoup à dire sur le sujet des chaînes de catactères et des données binaires, pour plus de détails sur ce sujet, voir le Unicode Howto : <https://docs.python.org/3.5/howto/unicode.html>.
 
 ---
-Autres changements
-------------------
+### Autres changements
 
 - Comparaisons : on ne peut plus comparer des types qui ne sont pas comparables, donc `1 < ''` est interdit en Python 3 (lève une `TypeError`).
 - Nombres entiers : tous les entiers sont maintenant du type `long`. Une division de nombres entiers comme `1/2` donne un ̀`float`, pour effectuer une division entière on écrira `1//2`.
 
 ---
-Nouvelles syntaxes
-------------------
+### Nouvelles syntaxes
 
 - Annotations des arguments et valeurs de retour des fonctions.
 
@@ -119,8 +113,7 @@ TypeError: func() takes 0 positional arguments but 2 were given
 - Déclaration `nonlocal` qui permet d'utiliser une variable qui n'est ni locale ni globale.
 
 ---
-Nouvelles syntaxes (suite)
---------------------------
+### Nouvelles syntaxes (suite)
 
 - Éclatement d'itérable avec reste :
 
@@ -148,8 +141,7 @@ Construira un dictionnaire associant un caractère à son code ASCII.
 ```
 
 ---
-Changements de syntaxe
-----------------------
+### Changements de syntaxe
 
 - Exceptions avec causes :
 
@@ -176,8 +168,7 @@ class C(metaclass=M):
 ```
 
 ---
-Syntaxes supprimées
--------------------
+### Syntaxes supprimées
 
 - Les antiquotes doivent être remplacées par `repr()`.
 - Les `<>` doivent être remplacés par `!=`.
@@ -187,25 +178,25 @@ Syntaxes supprimées
 - La syntaxe `from module import *` n'est plus autorisée dans les fonctions, mais seulement au niveau module.
 - La seule syntaxe admise pour les imports relatifs est `from .module import name`. Tous les `import from` non précédés d'un point sont considérés comme absolus.
 - Les classes *Classic* (ou de style ancien) n'existent plus.
+- Le formatage des chaînes avec l'opérateur `%` ne sera plus supporté dans une future version et est remplacé par la méthode `format()` de la classe `str`.
 
 ---
-Changements dans les bibliothèques
-----------------------------------
+### Changements divers
 
-- Des bibliothèques ont été abandonnées par manque d'usage ou suite à l'arrêt du support de plateformes (comme BeOS ou MacOS9).
-- Des bibliothèques ont été renommées pour adhérer au PEP 0008 : `ConfigParser` par exemple a été renommé en `configparser`.
-- Les bibliothèques mixtes (avec version pure Python et implémentée en C) ont été fusionnées de manière à ce que l'utilisateur n'aie pas à choisir la version utilisée.
-- Des bibliothèques ont été regroupées : par exemple *urllib*, *urllib2*, *urlparse* et *robotparse* ont été regroupées dans *urllib*.
+- Le concept d'*unbound method* a été abandonné et remplacé par de simples fonctions.
+- On peut enfin invoquer `super()` sans argument et cela renvoie la classe ou l'instance parente.
+- La fonction `raw_input()` a été renommée `intput()`, pour avoir l'ancien comportement, appeler `eval(input())`.
+- Le type `file` n'existe plus.
+- `dict.has_key()` n'existe plus, utiliser l'opérateur `in` à la place.
 
 ---
-Outils de migration
--------------------
+### Changements dans les bibliothèques
 
-2to3
-
-six
-
-Python 3 warning mode : démarrer Python avec l'option `-3`, indique alors les incompatibilités qui ne peuvent être gérées par *2to3*.
+- Des bibliothèques ont été **abandonnées** par manque d'utilisateurs ou suite à l'arrêt du support de plateformes (comme BeOS ou MacOS9).
+- Des bibliothèques ont été **renommées** pour adhérer au PEP 0008 : `ConfigParser` par exemple a été renommé en `configparser`.
+- Les bibliothèques mixtes (avec version pure Python et implémentée en C) ont été **fusionnées** de manière à ce que l'utilisateur n'aie pas à choisir la version utilisée.
+- Des bibliothèques ont été **regroupées** : par exemple *urllib*, *urllib2*, *urlparse* et *robotparse* ont été regroupées dans *urllib*.
+- D'autres bibliothèques enfin ont été nettoyées, comme *sys* par exemple.
 
 ---
 Procédure de migration
@@ -226,4 +217,15 @@ Les chiffres sur la migration
 -----------------------------
 
 <http://astrofrog.github.io/blog/2015/05/09/2015-survey-results/>
+
+---
+Outils de migration
+-------------------
+
+2to3
+
+six
+
+Python 3 warning mode : démarrer Python avec l'option `-3`, indique alors les incompatibilités qui ne peuvent être gérées par *2to3*.
+
 
