@@ -232,6 +232,7 @@ Python | 2012 | 2015
 
 L'adoption de Python 3 a donc commencé très lentement, mais elle s'accélère depuis peu.
 
+---
 Ressources
 ----------
 
