@@ -138,7 +138,64 @@ Nouvelles syntaxes (suite)
 
 Construira un dictionnaire associant un caractère à son code ASCII.
 
+- Expression pour un set :
 
+
+```python
+>>> s = {1, 2, 2, 3, 3}
+>>> print(s)
+{1, 2, 3}
+```
+
+---
+Changements de syntaxe
+----------------------
+
+- Exceptions avec causes :
+
+```python
+raise EXCEPTION from CAUSE
+# équivalent à
+exc = EXCEPTION
+exc.__cause__ = CAUSE
+raise exc
+```
+
+- Capture des exceptions, on doit écrire :
+
+```python
+except Exception as var:
+    ...
+```
+
+- Une méta-classe n'est plus un attribut `__metaclass__` d'une classe :
+
+```python
+class C(metaclass=M):
+    ...
+```
+
+---
+Syntaxes supprimées
+-------------------
+
+- Les antiquotes doivent être remplacées par `repr()`.
+- Les `<>` doivent être remplacés par `!=`.
+- Le mot clé `exec` est remplacé par la fonction `exec()`.
+- On ne peut plus ajouter un `l` ou un `L` à la fin des entiers.
+- On ne peut plus placer `u` ou `U` devant un chaîne.
+- La syntaxe `from module import *` n'est plus autorisée dans les fonctions, mais seulement au niveau module.
+- La seule syntaxe admise pour les imports relatifs est `from .module import name`. Tous les `import from` non précédés d'un point sont considérés comme absolus.
+- Les classes *Classic* (ou de style ancien) n'existent plus.
+
+---
+Changements dans les bibliothèques
+----------------------------------
+
+- Des bibliothèques ont été abandonnées par manque d'usage ou suite à l'arrêt du support de plateformes (comme BeOS ou MacOS9).
+- Des bibliothèques ont été renommées pour adhérer au PEP 0008 : `ConfigParser` par exemple a été renommé en `configparser`.
+- Les bibliothèques mixtes (avec version pure Python et implémentée en C) ont été fusionnées de manière à ce que l'utilisateur n'aie pas à choisir la version utilisée.
+- Des bibliothèques ont été regroupées : par exemple *urllib*, *urllib2*, *urlparse* et *robotparse* ont été regroupées dans *urllib*.
 
 ---
 Outils de migration
