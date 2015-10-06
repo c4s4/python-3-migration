@@ -216,6 +216,11 @@ Il est conseillé de ne pas éditer le code Python 3 avant de ne plus assurer le
 Les chiffres sur la migration
 -----------------------------
 
+Ressources
+----------
+
+<http://sametmax.com/python-3-est-fait-pour-les-nouveaux-venus/>
+
 <http://astrofrog.github.io/blog/2015/05/09/2015-survey-results/>
 
 ---
