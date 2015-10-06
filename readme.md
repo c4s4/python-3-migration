@@ -9,15 +9,13 @@ BDX.io 2015
 Les nouveautés de Python 3
 --------------------------
 
-Python 3 (ou Python 3000 ou encore Py3k) est une refonte de Python, incompatible avec les versions 2, qui a commencé le 5 avril 2006 et qui a abouti à la release de Python 3.0.0 le 3 décembre 2008. Depuis, nombre de fonctionnalités ont été backportées vers les versions 2.
+Python 3 (ou Python 3000 ou encore Py3k) est une refonte de Python, incompatible avec les versions 2, qui a commencé le 5 avril 2006 (avec le PEP 3000) et qui a abouti à la release de Python 3.0.0 le 3 décembre 2008.
+
+Depuis, nombre de fonctionnalités ont été backportées vers les versions 2 (accessible avec les imports `from __future__`.
 
 Un document liste les changements de Python 3 :
 
 <https://docs.python.org/3.5/whatsnew/3.0.html>
-
-Un site est dédié au portage vers Python 3 :
-
-<http://python3porting.com/>
 
 ---
 La fonction print
@@ -32,10 +30,6 @@ print "Hello World!"
 print("Hello World!")
 ```
 
----
-Les formes bizarres de print
-----------------------------
-
 Les formes les plus bizarres ont été rationalisées :
 
 ```python
@@ -49,35 +43,15 @@ print("error", file=sys.stderr)
 print((x, y))
 ```
 
----
-Bonnes nouvelles pour print
----------------------------
-
-L'outil `2to3` (qui convertit les sources Python 2 en Python 3) gère les déclarations `print`.
-
-On peut anticiper dans les sources 2 avec la déclaration :
-
-```python
-from __future__ import print_function
-
-import sys
-
-print("Hello World!", file=sys.stderr)
-```
-
-L'import force le comportement de Python 3 dans des sources Python 2.
+On peut utiliser ces nouvelles formes en Python 2 avec l'import `from __future__ import print_function`, mais on ne peut plus utiliser les formes autorisées en Python 2.
 
 ---
 Vues et itérateurs au lieu de listes
 ------------------------------------
 
-En Python 2, `dict.keys()`, `dict.values()` et `dict.items()` renvoyaient des listes. Ces listes sont valides au moment de l'appel et si le dictionnaire est modifié, la liste ne l'était pas. D'autre part, la liste renvoyée est modifiable.
+En Python 2, `dict.keys()`, `dict.values()` et `dict.items()` renvoient une liste. Cette liste est valide au moment de l'appel et si le dictionnaire est modifié, la liste ne l'est pas. D'autre part, cette liste modifiable.
 
-En Python 3, ces appels renvoient des vues (*views* en anglais). Ces vues sont reflètent l'état du dictionnaire s'il est modifié. D'autre part, ces vues ne sont pas modifiables.
-
----
-Vues et itérateurs au lieu de listes (suite)
---------------------------------------------
+En Python 3, ces appels renvoient des vues (*views* en anglais). Ces vues reflètent l'état du dictionnaire, même après modification. D'autre part, ces vues ne sont pas modifiables.
 
 On peut voir la différence entre listes et vues de la manière suivante :
 
