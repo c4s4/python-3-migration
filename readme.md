@@ -218,14 +218,14 @@ Les chiffres sur la migration
 
 Des chiffres de migration vers Python 3 sont disponibles :
 
-Python | 2012 | 2015
------- | ---- | ----
-2.4    | 1    | 0
-2.5    | 1    | 0
-2.6    | 14   | 2
-2.7    | 83   | 81
-3.3    | 1    | 1
-3.4    | 0    | 16
+Python | % 2012 | % 2015
+------ | ------ | ------
+2.4    | 1      | 0
+2.5    | 1      | 0
+2.6    | 14     | 2
+2.7    | 83     | 81
+3.3    | 1      | 1
+3.4    | 0      | 16
 
 L'adoption de Python 3 a donc commencé très lentement, mais elle s'accélère depuis peu.
 
