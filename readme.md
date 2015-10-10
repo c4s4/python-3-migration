@@ -199,8 +199,21 @@ class C(metaclass=M):
 - D'autres bibliothèques enfin ont été nettoyées, comme *sys* par exemple.
 
 ---
-Procédure de migration
-----------------------
+Réaliser la migration
+---------------------
+
+Pour réaliser la migration, on peut utiliser les outils suivants :
+
+- **2to3** est un outil qui réalise la transformation d'un source Python 2 vers 3. Il faut cependant avoir réalisé un travail préparatoire, en particulier sur les chaînes de caractère.
+
+- **-3** est une option de la commande Python qui lève des warnings pour le code Python 2 qui ne peut être automatiquement converti vers 3 avec l'outil *2to3*.
+
+- **from __future__** est une série d'imports (*division*, *absolute\_import*, *print\_function* et *unicode\_literals*) qui permettent d'utiliser des fonctionnalités Python 3 dans un sourec Python 2.
+
+- **six** est un bibliothèque permettant de réaliser du code compatible Python 2 et 3.
+
+---
+### Procédure de migration
 
 1. S'assurer, avant la migration, que l'on a une bonne couverture de tests.
 2. Activer les warnings Python 3.
@@ -213,38 +226,48 @@ Procédure de migration
 Il est conseillé de ne pas éditer le code Python 3 avant de ne plus assurer le support de la version Python 2.
 
 ---
-Les chiffres sur la migration
------------------------------
+Les chiffres de la migration
+----------------------------
 
-Des chiffres de migration vers Python 3 sont disponibles :
+Des chiffres de migration vers Python 3 sont disponibles (établis dans le milieu du calcul scientifique, voir références) :
 
-Python | % 2012 | % 2015
------- | ------ | ------
-2.4    | 1      | 0
-2.5    | 1      | 0
-2.6    | 14     | 2
-2.7    | 83     | 81
-3.3    | 1      | 1
-3.4    | 0      | 16
+Python | 2012 (%) | 2015 (%)
+------ | -------- | --------
+2.4    | 1        | 0
+2.5    | 1        | 0
+2.6    | 14       | 2
+2.7    | 83       | 81
+3.3    | 1        | 1
+3.4    | 0        | 16
 
-L'adoption de Python 3 a donc commencé très lentement, mais elle s'accélère depuis peu.
+L'adoption de Python 3 a donc commencé très lentement, mais elle s'accélère depuis peu. D'autre part, si on supporte les versions **2.7** et **3.4** (pour une bibliothèque par exemple), on couvre **97%** des usages.
 
 ---
-Ressources
+### Migration des bibliothèques
+
+Sur les **200** bibliothèques les plus téléchargées de [PyPi](http://pypi.python.org), **172** ont été portées vers Python 3, soit **86%** (au 5 octobre 2012).
+
+L'essentiel des bibliothèques a donc été migré. Cependant, certaines bibliothèques très utilisées (comme *MySQL-python* par exemple) ne le sont pas. C'est peut être l'occasion de tester des alternatives !
+
+---
+Références
 ----------
 
-<http://sametmax.com/python-3-est-fait-pour-les-nouveaux-venus/>
+Ce qui change dans Python 3 : <https://docs.python.org/3.5/whatsnew/3.0.html>
 
-<http://astrofrog.github.io/blog/2015/05/09/2015-survey-results/>
+
+Chiffres sur la migration vers Python 3 :
+
+- Pour 2015 : <http://astrofrog.github.io/blog/2015/05/09/2015-survey-results/>
+- Pour 2012 : <http://astrofrog.github.io/blog/2013/01/13/what-python-installations-are-scientists-using/>.
+- Bibliothèques : <http://python3wos.appspot.com/>
+
+Autres sources :
+
+- Site dédié à la migration : <http://python3porting.com>
+- Article sur la migration : <http://sametmax.com/python-3-est-fait-pour-les-nouveaux-venus/>
+- Imports *\_\_future\_\_* : <https://docs.python.org/2/library/__future__.html>
 
 ---
-Outils de migration
--------------------
-
-2to3
-
-six
-
-Python 3 warning mode : démarrer Python avec l'option `-3`, indique alors les incompatibilités qui ne peuvent être gérées par *2to3*.
-
-From future : division, absolute\_import, print\_function et unicode\_literals (<https://docs.python.org/2/library/__future__.html>).
+Merci
+=====
