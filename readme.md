@@ -204,7 +204,7 @@ Réaliser la migration
 
 Pour réaliser la migration, on peut utiliser les outils suivants :
 
-- **from __future__** est une série d'imports (*division*, *absolute\_import*, *print\_function* et *unicode\_literals*) qui permettent d'utiliser des fonctionnalités Python 3 dans un sourec Python 2.
+- **from \_\_future\_\_** est une série d'imports (*division*, *absolute\_import*, *print\_function* et *unicode\_literals*) qui permettent d'utiliser des fonctionnalités Python 3 dans un sourec Python 2.
 
 - **-3** est une option de la commande Python qui lève des warnings pour le code Python 2 qui ne peut être automatiquement converti vers 3 avec l'outil *2to3*.
 
