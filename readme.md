@@ -156,7 +156,11 @@ raise exc
 - Capture des exceptions, on doit écrire :
 
 ```python
-except Exception as var:
+# avant
+except Exception, e:
+    ...
+# après
+except Exception as e:
     ...
 ```
 
