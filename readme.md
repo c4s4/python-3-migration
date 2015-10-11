@@ -42,7 +42,7 @@ print("error", file=sys.stderr)
 print((x, y))
 ```
 
-On peut utiliser ces nouvelles formes en Python 2 avec l'import `from __future__ import print_function`, mais on ne peut plus utiliser les formes autorisées en Python 2.
+On peut utiliser ces nouvelles formes dans un source Python 2 avec l'import `from __future__ import print_function`, mais on ne peut alors plus utiliser les anciennes formes.
 
 ---
 ### Vues et itérateurs au lieu de listes
