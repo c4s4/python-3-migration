@@ -216,14 +216,15 @@ Pour réaliser la migration, on peut utiliser les outils suivants :
 ### Procédure de migration
 
 1. S'assurer, avant la migration, que l'on a une bonne couverture de tests.
-2. Activer les warnings Python 3.
-3. Tester et éditer jusqu'à ce qu'il ne reste plus de warning.
-4. Utiliser l'outil *2to3* pour convertir le source vers Python 3. Ne pas éditer les sources résultants à la main !
-5. Tester le code avec Python 3.
-6. Si des problèmes persistent, corriger le source Python 2 et reprendre à partir de l'étape 3.
-7. On releasera deux versions : une Python 2 et une Python 3.
+2. Portage vers Python 2.7.
+3. Activer les warnings Python 3.
+4. Tester et éditer jusqu'à ce qu'il ne reste plus de warning.
+5. Utiliser l'outil *2to3* pour convertir le source vers Python 3. Ne pas éditer les sources résultants à la main !
+6. Tester le code avec Python 3.
+7. Si des problèmes persistent, corriger le source Python 2 et reprendre à partir de l'étape 4.
+8. On releasera deux versions : une Python 2 et une Python 3.
 
-Il est conseillé de ne pas éditer le code Python 3 avant de ne plus assurer le support de la version Python 2.
+Il est conseillé de ne pas éditer le code Python 3 tant que l'on assure le support la version Python 2.
 
 ---
 Les chiffres de la migration
