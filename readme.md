@@ -224,7 +224,7 @@ Pour réaliser la migration, on peut utiliser les outils suivants :
 7. Si des problèmes persistent, corriger le source Python 2 et reprendre à partir de l'étape 4.
 8. On releasera deux versions : une Python 2 et une Python 3.
 
-Il est conseillé de ne pas éditer le code Python 3 tant que l'on assure le support la version Python 2.
+Il est conseillé de ne pas éditer le code Python 3 tant que l'on assure le support de la version Python 2.
 
 ---
 Les chiffres de la migration
