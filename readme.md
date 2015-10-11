@@ -241,7 +241,7 @@ Python | 2012 (%) | 2015 (%)
 3.3    | 1        | 1
 3.4    | 0        | 16
 
-L'adoption de Python 3 a donc commencé très lentement, mais elle s'accélère depuis peu. D'autre part, si on supporte les versions **2.7** et **3.4** (pour une bibliothèque par exemple), on couvre **97%** des usages.
+L'adoption de Python 3 a donc encore faible, mais elle s'accélère depuis peu. D'autre part, si on supporte les versions **2.7** et **3.4** (pour une bibliothèque par exemple), on couvre **97%** des usages.
 
 ---
 ### Migration des bibliothèques
