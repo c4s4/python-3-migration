@@ -214,7 +214,7 @@ Pour réaliser la migration, on peut utiliser les outils suivants :
 
 - **2to3** est un outil qui réalise la transformation d'un source Python 2 vers 3. Il faut cependant avoir réalisé un travail préparatoire, en particulier sur les chaînes de caractère.
 
-- **six** est un bibliothèque permettant de réaliser du code compatible Python 2 et 3.
+- **six** est une bibliothèque permettant de réaliser du code compatible Python 2 et 3.
 
 ---
 ### Procédure de migration
