@@ -9,17 +9,17 @@ BDX.io 2015
 Qui suis-je ?
 -------------
 
-[michel.casabianca@gmail.com](mailto:michel.casabianca@gmail.com)
-
-<http://sweetohm.net>
-
-<http://github.com/c4s4>
-
 Développeur Freelance, autheur O'Reilly et conférencier.
 
 Mon crédo : les langages ne sont que des outils. Plus on en a dans sa boîte, mieux on est équipé pour répondre aux problématiques du client. J'apprends donc un nouveau langage chaque année (dernier venu : le Go).
 
 Je pratique Python depuis 1998 et Java depuis 1996.
+
+[michel.casabianca@gmail.com](mailto:michel.casabianca@gmail.com)
+
+<http://sweetohm.net>
+
+<http://github.com/c4s4>
 
 ---
 Les nouveautés de Python 3
