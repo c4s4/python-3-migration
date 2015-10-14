@@ -289,6 +289,23 @@ Sur les **200** bibliothèques les plus téléchargées de [PyPi](http://pypi.py
 L'essentiel des bibliothèques a donc été migré. Cependant, certaines bibliothèques très utilisées (comme *MySQL-python* par exemple) ne le sont pas. C'est peut être l'occasion de tester des alternatives !
 
 ---
+Conclusion
+----------
+
+Ne pas négliger le coût de la migration :
+
+- Il faut réaliser un travail préparatoire.
+- L'outil *2to3* ne gère pas tous les cas.
+
+Si on recherche la compatibilté 2 *et* 3 :
+
+- Le travail de migration est plus complexe.
+- La bibliothèque *six* ne gère pas tous les cas.
+- Le code perd en lisibilité et maintenabilité.
+
+Donc la vraie question à se poser est : suis-je pret à payer le prix de la migration ?
+
+---
 Références
 ----------
 
