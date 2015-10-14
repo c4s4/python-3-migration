@@ -11,11 +11,15 @@ Qui suis-je ?
 
 [michel.casabianca@gmail.com](mailto:michel.casabianca@gmail.com)
 
+<http://sweetohm.net>
+
+<http://github.com/c4s4>
+
 Développeur Freelance, autheur O'Reilly et conférencier.
 
-Mon crédo : les langages ne sont que des outils. Plus on en a dans sa boite, plus on est équipé pour répondre aux problématiques du client. J'apprends donc un nouveau chaque année (dernier venu : le Go).
+Mon crédo : les langages ne sont que des outils. Plus on en a dans sa boîte, mieux on est équipé pour répondre aux problématiques du client. J'apprends donc un nouveau chaque année (dernier venu : le Go).
 
-Je pratique Python depuis 1998.
+Je pratique Python depuis 1998 et Java depuis 1996.
 
 ---
 Les nouveautés de Python 3
@@ -215,6 +219,30 @@ class C(metaclass=M):
 - D'autres bibliothèques enfin ont été nettoyées, comme *sys* par exemple.
 
 ---
+Les chiffres de la migration
+----------------------------
+
+Des chiffres de migration vers Python 3 sont disponibles (établis dans le milieu du calcul scientifique, voir références) :
+
+Python | 2012 (%) | 2015 (%)
+------ | -------- | --------
+2.4    | 1        | 0
+2.5    | 1        | 0
+2.6    | 14       | 2
+2.7    | 83       | 81
+3.3    | 1        | 1
+3.4    | 0        | 16
+
+L'adoption de Python 3 est encore faible, mais elle s'accélère depuis peu. D'autre part, si on supporte les versions **2.7** et **3.4** (pour une bibliothèque par exemple), on couvre **97%** des usages.
+
+---
+### Migration des bibliothèques
+
+Sur les **200** bibliothèques les plus téléchargées de [PyPi](http://pypi.python.org), **172** ont été portées vers Python 3, soit **86%** (au 5 octobre 2012).
+
+L'essentiel des bibliothèques a donc été migré. Cependant, certaines bibliothèques très utilisées (comme *MySQL-python* par exemple) ne le sont pas. C'est peut être l'occasion de tester des alternatives !
+
+---
 Réaliser la migration
 ---------------------
 
@@ -257,30 +285,6 @@ Exemple :
 ![](img/code-2-et-3.png)
 
 ---
-Les chiffres de la migration
-----------------------------
-
-Des chiffres de migration vers Python 3 sont disponibles (établis dans le milieu du calcul scientifique, voir références) :
-
-Python | 2012 (%) | 2015 (%)
------- | -------- | --------
-2.4    | 1        | 0
-2.5    | 1        | 0
-2.6    | 14       | 2
-2.7    | 83       | 81
-3.3    | 1        | 1
-3.4    | 0        | 16
-
-L'adoption de Python 3 est encore faible, mais elle s'accélère depuis peu. D'autre part, si on supporte les versions **2.7** et **3.4** (pour une bibliothèque par exemple), on couvre **97%** des usages.
-
----
-### Migration des bibliothèques
-
-Sur les **200** bibliothèques les plus téléchargées de [PyPi](http://pypi.python.org), **172** ont été portées vers Python 3, soit **86%** (au 5 octobre 2012).
-
-L'essentiel des bibliothèques a donc été migré. Cependant, certaines bibliothèques très utilisées (comme *MySQL-python* par exemple) ne le sont pas. C'est peut être l'occasion de tester des alternatives !
-
----
 Références
 ----------
 
@@ -304,3 +308,5 @@ Autres sources :
 ---
 Merci
 =====
+
+[michel.casabianca@gmail.com](michel.casabianca@gmail.com)
