@@ -6,6 +6,18 @@ Michel Casabianca
 BDX.io 2015
 
 ---
+Qui suis-je ?
+-------------
+
+[michel.casabianca@gmail.com](mailto:michel.casabianca@gmail.com)
+
+Développeur Freelance, autheur O'Reilly et conférencier.
+
+Mon crédo : les langages ne sont que des outils. Plus on en a dans sa boite, plus on est équipé pour répondre aux problématiques du client. J'apprends donc un nouveau chaque année (dernier venu : le Go).
+
+Je pratique Python depuis 1998.
+
+---
 Les nouveautés de Python 3
 --------------------------
 
