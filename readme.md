@@ -11,15 +11,17 @@ Qui suis-je ?
 
 Développeur Freelance, autheur O'Reilly et conférencier.
 
-Mon crédo : les langages ne sont que des outils. Plus on en a dans sa boîte, mieux on est équipé pour répondre aux problématiques du client. J'apprends donc un nouveau langage chaque année (dernier venu : le Go).
+Mon crédo : les langages de programmation ne sont que des outils; plus on en a dans sa boîte, mieux on est équipé pour répondre aux problématiques du client.
 
-Je pratique Python depuis 1998 et Java depuis 1996.
+Je m'efforce donc de pratiquer un ensemble de langages de programmation complémentaires. Java depuis 1996, Python depuis 1998, Ruby depuis 2005 et Go depuis 2014.
 
 [michel.casabianca@gmail.com](mailto:michel.casabianca@gmail.com)
 
 <http://sweetohm.net>
 
 <http://github.com/c4s4>
+
+<http://linkedin.com/in/casabianca>
 
 ---
 Les nouveautés de Python 3
