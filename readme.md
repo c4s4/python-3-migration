@@ -51,13 +51,13 @@ Les formes les plus bizarres ont été rationalisées :
 
 ```python
 # avant
-print x,
-print >>sys.stderr, "error"
-print (x, y)
+print "pas de retour à la ligne",
+print >>sys.stderr, "erreur"
+print ("spam", "eggs")
 # après
-print(x, end=" ")
-print("error", file=sys.stderr)
-print((x, y))
+print("pas de retour à la ligne", end=" ")
+print("erreur", file=sys.stderr)
+print(("spam", "eggs"))
 ```
 
 On peut utiliser ces nouvelles formes dans un source Python 2 avec l'import `from __future__ import print_function`, mais on ne peut alors plus utiliser les anciennes formes.
@@ -144,10 +144,10 @@ TypeError: func() takes 0 positional arguments but 2 were given
 - Compréhension de dictionnaire :
 
 ```python
-{c: chr(c) for c in range(256)}
+{65+c: chr(65+c) for c in range(26)}
 ```
 
-Construira un dictionnaire associant un caractère à son code ASCII.
+Construira un dictionnaire associant une lettre majuscule à son code ASCII.
 
 - Expression pour un set :
 
@@ -164,11 +164,11 @@ Construira un dictionnaire associant un caractère à son code ASCII.
 - Exceptions avec causes :
 
 ```python
-raise EXCEPTION from CAUSE
+raise Exception("exception") from Exception("cause)
 # équivalent à
-exc = EXCEPTION
-exc.__cause__ = CAUSE
-raise exc
+e = Exception("exception")
+e.__cause__ = Exception("cause")
+raise e
 ```
 
 - Capture des exceptions, on doit écrire :
