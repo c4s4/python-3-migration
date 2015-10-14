@@ -1,4 +1,6 @@
 BUILD_DIR=build
+PYTHON_2=/opt/python/2.7.10/bin/python
+PYTHON_3=/opt/python/3.5.0/bin/python
 
 YELLOW=\033[1m\033[93m
 CYAN=\033[1m\033[96m
@@ -19,10 +21,10 @@ publish:
 
 examples:
 	@echo "$(YELLOW)Running example code$(CLEAR)"
-	@echo "###### PYTHON 2 ######"
-	/opt/python/2.7.10/bin/python src/python-2.py
-	@echo "###### PYTHON 3 ######"
-	/opt/python/3.5.0/bin/python src/python-3.py
+	@echo "############################ PYTHON 2 ############################"
+	$(PYTHON_2) src/python-2.py
+	@echo "############################ PYTHON 3 ############################"
+	$(PYTHON_3) src/python-3.py
 
 clean:
 	@echo "$(YELLOW)Cleaning generated files$(CLEAR)"

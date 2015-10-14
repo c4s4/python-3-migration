@@ -105,7 +105,7 @@ Il y aurait beaucoup à dire sur le sujet des chaînes de caractères et des don
 ### Autres changements
 
 - Comparaisons : on ne peut plus comparer des types qui ne sont pas comparables, donc `1 < ''` est interdit en Python 3 (lève une `TypeError`).
-- Nombres entiers : tous les entiers sont maintenant du type `long`. Une division de nombres entiers comme `1/2` donne un ̀`float`, pour effectuer une division entière on écrira `1//2`.
+- Nombres entiers : tous les entiers sont maintenant du type `long`. Une division de nombres entiers comme `1/2` donne un `float`, pour effectuer une division entière on écrira `1//2`.
 
 ---
 ### Nouvelles syntaxes
