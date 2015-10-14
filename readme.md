@@ -287,6 +287,7 @@ Autres sources :
 - Article sur la migration : <http://sametmax.com/python-3-est-fait-pour-les-nouveaux-venus/>
 - Imports *\_\_future\_\_* : <https://docs.python.org/2/library/__future__.html>
 - Code compatible 2 et 3 : <http://python-future.org/compatible_idioms.html>
+- Projet six : <http://pythonhosted.org/six/>
 
 ---
 Merci
