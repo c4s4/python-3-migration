@@ -230,6 +230,20 @@ Pour réaliser la migration, on peut utiliser les outils suivants :
 
 Il est conseillé de ne pas éditer le code Python 3 tant que l'on assure le support de la version Python 2.
 
+Il est conseillé de ne pas faire de code compatible Python 2 *et* Python 3, mais de maintenir un source Python 2 capable de migrer automatiquement vers Python 3 avec l'outil *2to3*. On distribuera alors deux versions, compatibles avec une version de Python.
+
+---
+### Code compatible Python 2 *et* 3
+
+On peut vouloir faire du code compatible Python 2 *et* 3 en même temps. On le fera pour une bibliothèque ou si l'on est amené à déployer sur des plateformes avec Python 2 et 3.
+
+- L'intérêt est de n'avoir qu'une seule archive à déployer.
+- L'inconvénient est que l'on écrit du code bien plus complexe.
+
+Exemple :
+
+![](img/code-2-et-3.png)
+
 ---
 Les chiffres de la migration
 ----------------------------
@@ -272,6 +286,7 @@ Autres sources :
 - Site dédié à la migration : <http://python3porting.com>
 - Article sur la migration : <http://sametmax.com/python-3-est-fait-pour-les-nouveaux-venus/>
 - Imports *\_\_future\_\_* : <https://docs.python.org/2/library/__future__.html>
+- Code compatible 2 et 3 : <http://python-future.org/compatible_idioms.html>
 
 ---
 Merci
