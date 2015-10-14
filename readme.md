@@ -219,6 +219,50 @@ class C(metaclass=M):
 - D'autres bibliothèques enfin ont été nettoyées, comme *sys* par exemple.
 
 ---
+Réaliser la migration
+---------------------
+
+Pour réaliser la migration, on peut utiliser les outils suivants :
+
+- **-3** est une option de la commande Python qui lève des warnings pour le code Python 2 qui ne peut être automatiquement converti vers 3 avec l'outil *2to3*.
+
+- **2to3** est un outil qui réalise la transformation d'un source Python 2 vers 3. Il faut cependant avoir réalisé un travail préparatoire, en particulier sur les chaînes de caractère.
+
+- **from \_\_future\_\_** est une série d'imports (*division*, *absolute\_import*, *print\_function* et *unicode\_literals*) qui permettent d'utiliser des fonctionnalités Python 3 dans un source Python 2.
+
+- **six** est une bibliothèque permettant de réaliser du code compatible Python 2 et 3.
+
+---
+### Procédure de migration
+
+1. S'assurer, avant la migration, que l'on a une bonne couverture de tests.
+2. Portage vers Python 2.7.
+3. Activer les warnings Python 3 avec l'option *-3*.
+4. Tester et éditer jusqu'à ce qu'il ne reste plus de warning.
+5. Utiliser l'outil *2to3* pour convertir le source vers Python 3. Ne pas éditer les sources résultants à la main !
+6. Tester le code avec Python 3.
+7. Si des problèmes persistent, corriger le source Python 2 et reprendre à partir de l'étape 4.
+8. On releasera deux versions : une Python 2 et une Python 3.
+
+Il est conseillé de ne pas éditer le code Python 3 tant que l'on assure le support de la version Python 2.
+
+Il est conseillé de ne pas faire de code compatible Python 2 *et* Python 3, mais de maintenir un source Python 2 capable de migrer automatiquement vers Python 3 avec l'outil *2to3*. On distribuera alors deux versions, compatibles avec une version de Python.
+
+---
+### Code compatible Python 2 *et* 3
+
+On peut vouloir faire du code compatible Python 2 *et* 3 en même temps. On le fera pour une bibliothèque ou si l'on est amené à déployer sur des plateformes avec Python 2 et 3.
+
+- L'intérêt est de n'avoir qu'une seule archive à déployer.
+- L'inconvénient est que l'on écrit du code bien plus complexe.
+
+On utilisera alors les imports *from \_\_future\_\_* et la bibliothèque *six*.
+
+Exemple de code compatible Python 2 et 3 :
+
+![](img/code-2-et-3.png)
+
+---
 Les chiffres de la migration
 ----------------------------
 
@@ -241,48 +285,6 @@ L'adoption de Python 3 est encore faible, mais elle s'accélère depuis peu. D'a
 Sur les **200** bibliothèques les plus téléchargées de [PyPi](http://pypi.python.org), **172** ont été portées vers Python 3, soit **86%** (au 5 octobre 2012).
 
 L'essentiel des bibliothèques a donc été migré. Cependant, certaines bibliothèques très utilisées (comme *MySQL-python* par exemple) ne le sont pas. C'est peut être l'occasion de tester des alternatives !
-
----
-Réaliser la migration
----------------------
-
-Pour réaliser la migration, on peut utiliser les outils suivants :
-
-- **from \_\_future\_\_** est une série d'imports (*division*, *absolute\_import*, *print\_function* et *unicode\_literals*) qui permettent d'utiliser des fonctionnalités Python 3 dans un source Python 2.
-
-- **-3** est une option de la commande Python qui lève des warnings pour le code Python 2 qui ne peut être automatiquement converti vers 3 avec l'outil *2to3*.
-
-- **2to3** est un outil qui réalise la transformation d'un source Python 2 vers 3. Il faut cependant avoir réalisé un travail préparatoire, en particulier sur les chaînes de caractère.
-
-- **six** est une bibliothèque permettant de réaliser du code compatible Python 2 et 3.
-
----
-### Procédure de migration
-
-1. S'assurer, avant la migration, que l'on a une bonne couverture de tests.
-2. Portage vers Python 2.7.
-3. Activer les warnings Python 3.
-4. Tester et éditer jusqu'à ce qu'il ne reste plus de warning.
-5. Utiliser l'outil *2to3* pour convertir le source vers Python 3. Ne pas éditer les sources résultants à la main !
-6. Tester le code avec Python 3.
-7. Si des problèmes persistent, corriger le source Python 2 et reprendre à partir de l'étape 4.
-8. On releasera deux versions : une Python 2 et une Python 3.
-
-Il est conseillé de ne pas éditer le code Python 3 tant que l'on assure le support de la version Python 2.
-
-Il est conseillé de ne pas faire de code compatible Python 2 *et* Python 3, mais de maintenir un source Python 2 capable de migrer automatiquement vers Python 3 avec l'outil *2to3*. On distribuera alors deux versions, compatibles avec une version de Python.
-
----
-### Code compatible Python 2 *et* 3
-
-On peut vouloir faire du code compatible Python 2 *et* 3 en même temps. On le fera pour une bibliothèque ou si l'on est amené à déployer sur des plateformes avec Python 2 et 3.
-
-- L'intérêt est de n'avoir qu'une seule archive à déployer.
-- L'inconvénient est que l'on écrit du code bien plus complexe.
-
-Exemple :
-
-![](img/code-2-et-3.png)
 
 ---
 Références
