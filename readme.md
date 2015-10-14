@@ -17,7 +17,7 @@ Qui suis-je ?
 
 Développeur Freelance, autheur O'Reilly et conférencier.
 
-Mon crédo : les langages ne sont que des outils. Plus on en a dans sa boîte, mieux on est équipé pour répondre aux problématiques du client. J'apprends donc un nouveau chaque année (dernier venu : le Go).
+Mon crédo : les langages ne sont que des outils. Plus on en a dans sa boîte, mieux on est équipé pour répondre aux problématiques du client. J'apprends donc un nouveau langage chaque année (dernier venu : le Go).
 
 Je pratique Python depuis 1998 et Java depuis 1996.
 
@@ -97,7 +97,7 @@ En Python 3, le type qui contient du texte est `str` et celui qui contient de la
 
 On peut préparer la migration en n'utilisant en Python 2 que des chaînes unicode pour contenir du texte et effectuer explicitement les conversions entre `str` et `bytes`. Alors l'outil *2to3* pourra effectuer la majeure partie du travail pour vous.
 
-Il y aurait beaucoup à dire sur le sujet des chaînes de catactères et des données binaires, pour plus de détails sur ce sujet, voir le Unicode Howto : <https://docs.python.org/3.5/howto/unicode.html>.
+Il y aurait beaucoup à dire sur le sujet des chaînes de caractères et des données binaires, pour plus de détails sur ce sujet, voir le Unicode Howto : <https://docs.python.org/3.5/howto/unicode.html>.
 
 ---
 ### Autres changements
