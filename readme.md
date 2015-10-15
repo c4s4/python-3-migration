@@ -164,7 +164,7 @@ Construira un dictionnaire associant une lettre majuscule à son code ASCII.
 - Exceptions avec causes :
 
 ```python
-raise Exception("exception") from Exception("cause)
+raise Exception("exception") from Exception("cause")
 # équivalent à
 e = Exception("exception")
 e.__cause__ = Exception("cause")
@@ -302,6 +302,7 @@ Si on recherche la compatibilté 2 *et* 3 :
 - Le travail de migration est plus complexe.
 - La bibliothèque *six* ne gère pas tous les cas.
 - Le code perd en lisibilité et maintenabilité.
+- Il faudra migrer vers Python 3 un jour.
 
 Donc la vraie question à se poser est : suis-je pret à payer le prix de la migration ?
 
