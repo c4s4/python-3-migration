@@ -284,7 +284,7 @@ L'adoption de Python 3 est encore faible, mais elle s'accélère depuis peu. D'a
 ---
 ### Migration des bibliothèques
 
-Sur les **200** bibliothèques les plus téléchargées de [PyPi](http://pypi.python.org), **172** ont été portées vers Python 3, soit **86%** (au 5 octobre 2012).
+Sur les **200** bibliothèques les plus téléchargées de [PyPi](http://pypi.python.org), **172** ont été portées vers Python 3, soit **86%** (au 5 octobre 2015).
 
 L'essentiel des bibliothèques a donc été migré. Cependant, certaines bibliothèques très utilisées (comme *MySQL-python* par exemple) ne le sont pas. C'est peut être l'occasion de tester des alternatives !
 
