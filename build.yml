@@ -1,0 +1,6 @@
+# NeON build file (http://github.com/c4s4/neon)
+
+extends: c4s4/build/slides.yml
+
+properties:
+  TITLE: 'Faut-il passer à Python 3 ?'
