@@ -3,5 +3,5 @@
 extends: [slides, git-master]
 
 properties:
-  TITLE:   'Faut-il passer à Python 3 ?'
+  TITLE:   'Passer à Python 3'
   OPTIONS: '{ratio: "4:3"}'
