@@ -1,6 +1,7 @@
 # NeON build file (http://github.com/c4s4/neon)
 
-extends: c4s4/build/slides.yml
+extends: [slides, git-master]
 
 properties:
-  TITLE: 'Faut-il passer à Python 3 ?'
+  TITLE:   'Faut-il passer à Python 3 ?'
+  OPTIONS: '{ratio: "4:3"}'
