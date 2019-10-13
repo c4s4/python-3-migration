@@ -1,15 +1,13 @@
-Faut-il passer à Python 3 ?
-===========================
+# Passer à Python 3
 
-Michel Casabianca
+![](img/python.png)
 
-BDX.io 2015
+# PyCon FR 2019
 
 ---
-Qui suis-je ?
--------------
+## Qui suis-je ?
 
-Développeur Freelance, autheur O'Reilly et conférencier.
+Développeur Freelance ou Pas, Autheur O'Reilly et Conférencier.
 
 Mon crédo : les langages de programmation ne sont que des outils; plus on en a dans sa boîte, mieux on est équipé pour répondre aux problématiques du client.
 
@@ -24,8 +22,18 @@ Je m'efforce donc de pratiquer un ensemble de langages de programmation complém
 <http://linkedin.com/in/casabianca>
 
 ---
-Les nouveautés de Python 3
---------------------------
+## Faut-il passer à Python 3 ?
+
+Le titre de la première version de cette présentation, qui datait de 2015, était : **Faut-il Passer à Python 3 ?** La question ne se pose plus car la fin de vie de python 2 est pour le **1er janvier 2020**.
+
+### La fin de vie de Python 2 est programmée dans 60 jours !
+
+Si vous n'avez pas migré vos projets critiques, il est urgent de le faire car après cette date il n'y aura **plus de mise à jour de sécurité** pour Python 2. Si votre projet a de fortes contraintes de sécurité et doit être mis à jour régulièrement, vous exposerez vos utilisateurs à de gros soucis.
+
+Si de plus vous êtes tenu par des normes de sécurité, comme PCIDSS qui impose des mises à jour de sécurité régulières, vous risquez de gros ennuis.
+
+---
+## Les nouveautés de Python 3
 
 Python 3 (ou Python 3000 ou encore Py3k) est une refonte de Python, incompatible avec les versions 2, qui a commencé le 5 avril 2006 (avec le PEP 3000) et qui a abouti à la release de Python 3.0.0 le 3 décembre 2008.
 
